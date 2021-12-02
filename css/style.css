@@ -1,0 +1,97 @@
+body{
+    background-color: #F6F6F6;
+}
+
+
+main{
+    width: 100%;
+    display: block;
+    margin-top: 0;
+}
+
+.sidebar{
+    background-color:#6D9886 ;
+    color: #fff;
+    position: fixed; /* O fixed aqui ta certo, é bem essa ideia mesmo, e um elemento fixo. Voce poda fazer com sticky também ou com absolute mesmo, tem um hack do css que nao precisa usar height, se voce adicionar bottom 0 e top 0, voce vai informar que o elemento é fixo da posição 0 do topo até a posição 0 do bot, ou seja, ele vai ocupar a tela toda */
+    height:100vh;
+    width: 20%;
+    left: 0px;
+    font-size: 20px;
+}
+
+.content-wrapper {
+    width: calc(100% - 20%);
+    margin-left: 20%;
+}
+
+.sidebar-wrap{
+    text-align: center;
+}
+
+.sidebar-item{
+    padding: 50px 0;
+}
+
+.itens{
+    margin: 10px 0;
+}
+
+.icon{
+    width: 128px;
+    height: 128px;
+}
+
+.header{
+    margin: 0 15px 150px;
+    display: flex;
+    justify-content: space-between; /* propriedades de flexbox só funcionam quando estiver usando o display flex (isso vale tanto para elementos containers (pais) quanto para filhos */
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: solid 3px #000;
+}
+
+.titulo-header{
+    font-size: 3em;
+}
+
+.board-holder {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+
+.board-holder .card-board {
+    padding: 0 15px;
+    flex: 1 1 33.333333%;
+    margin: 0 15px;    
+    box-sizing: border-box;
+}
+
+.board{
+    border-radius: 25px; 
+    height: 450px;
+    background-color: #D9CAB3;
+}
+
+.titulo-board{
+    font-size: 2em;
+    border-bottom: solid 3px #000;
+    padding: 15px;
+}
+
+/*
+.sidebar {
+    position: fixed ou sticky;
+    bottom: 0;
+    top: 0;
+    width: 20%;
+}
+*/
+/*
+A div que engloba o titulo e os cards .main {
+    margin-left: 20%;
+    width: (aqui voce pode usar calc, porque voce vai precisar ver o tamanho da side para definir o tamanho dessa.) calc(100vw - 20%) 100viewport (tamanho maximo da tela) - 20% da sidebar;
+
+    Quando voce faz uma sidebar, geralmente no mobile ela fica escondida
+}
+*/
